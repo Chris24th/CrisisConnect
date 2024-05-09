@@ -26,15 +26,20 @@ const IndexPage: React.FC = () => {
       .then((res) => res.json())
       .then((data: Comment[]) => setComments(data));
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    // Check if window is available (client-side)
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
   }, []);
 
   const handleScroll = () => {
-    const offset = window.scrollY;
-    setIsScrolled(offset > 0);
+    // Check if window is available (client-side)
+    if (typeof window !== "undefined") {
+      const offset = window.scrollY;
+      setIsScrolled(offset > 0);
+    }
   };
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -251,7 +256,7 @@ const IndexPage: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="h-auto p-8 bg-indigo-100 text-purple-900">
+      <section className="h-auto p-8 py-24 bg-indigo-100 text-purple-900">
         <h1 className="h3-style">
           Difference from the past where information is only provided by the
           media (TV, radio and print).
