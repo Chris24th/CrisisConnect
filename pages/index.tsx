@@ -281,8 +281,8 @@ const IndexPage: React.FC = () => {
       {/* -----------------------COMMENT SECTION----------------------- */}
       {/* -----------------------COMMENT SECTION----------------------- */}
       {/* -----------------------COMMENT SECTION----------------------- */}
-      <section id="comments" className="w-auto bg-gray-100 py-16">
-        <div className="max-w-3xl mx-auto px-4">
+      <section id="comments" className="bg-gray-100 py-16">
+        <div className="max-w-xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-gray-900">Comments</h2>
           <div className="bg-white rounded-lg shadow-md p-6">
             <form onSubmit={handleSubmit} className="flex mb-4">
