@@ -1,4 +1,11 @@
 import React, { useState, useEffect } from "react";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaTiktok,
+  FaYoutube,
+} from "react-icons/fa";
 import Head from "next/head";
 
 interface Comment {
@@ -83,9 +90,7 @@ const IndexPage: React.FC = () => {
           <div className="flex items-center">
             {/* <img src="/logo2.png" alt="Logo" className="h-12" /> */}
             <button onClick={() => scrollToSection("home")}>
-              <h1 className="text-xl font-bold logo-font text-purple-300">
-                Crisis Connect
-              </h1>
+              <h1 className="logo-font text-purple-100">Crisis Connect</h1>
             </button>
           </div>
           <nav className="hidden md:flex">
@@ -93,7 +98,7 @@ const IndexPage: React.FC = () => {
               {menuItems.map((item, index) => (
                 <li
                   key={index}
-                  className="px-5 py-2 ml-4 text-purple-200 rounded-full cursor-pointer hover:bg-purple-500"
+                  className="px-5 py-2 ml-4 text-purple-100 rounded-full cursor-pointer hover:bg-purple-500"
                   onClick={() => scrollToSection(item.toLowerCase())}
                 >
                   {item}
@@ -271,36 +276,100 @@ const IndexPage: React.FC = () => {
       {/* -----------------------COMMENT SECTION----------------------- */}
       {/* -----------------------COMMENT SECTION----------------------- */}
       {/* -----------------------COMMENT SECTION----------------------- */}
-      <section id="comments" className="h-screen bg-gray-400">
-        <h2>Comments</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={newComment}
-            onChange={(e) => setNewComment(e.target.value)}
-            placeholder="Add a new comment"
-          />
-          <button type="submit">Submit</button>
-        </form>
-        <ul>
-          {comments.map((comment) => (
-            <li key={comment.id}>
-              {comment.text}
-              {/* <div>
-                <button onClick={() => handleThumb(comment.id, 1)}>👍</button>
-              </div> */}
-            </li>
-          ))}
-        </ul>
+      <section id="comments" className="w-auto bg-gray-100 py-16">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-gray-900">Comments</h2>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <form onSubmit={handleSubmit} className="flex mb-4">
+              <input
+                type="text"
+                value={newComment}
+                onChange={(e) => setNewComment(e.target.value)}
+                placeholder="Add a new comment"
+                className="flex-grow mr-2 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button
+                type="submit"
+                className="bg-purple-700 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded-lg"
+              >
+                Submit
+              </button>
+            </form>
+            <ul>
+              {comments.map((comment) => (
+                <li
+                  key={comment.id}
+                  className="bg-gray-100 rounded-lg p-4 mb-4 flex justify-between items-center"
+                >
+                  <p className="text-gray-800">{comment.text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
       {/* -----------------------FOOTER SECTION----------------------- */}
       {/* -----------------------FOOTER SECTION----------------------- */}
       {/* -----------------------FOOTER SECTION----------------------- */}
-      <footer
-        id="contact"
-        className="h-32 bg-purple-900 flex justify-center items-center"
-      >
-        <p>Footer content </p>
+      <footer id="contact" className="bg-purple-900 text-purple-100 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+            <p>Email: ryan@crisisconnect.com</p>
+            <p>Phone: +6398 7654 3210</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-purple-400 transition duration-300"
+              >
+                <FaFacebook className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-purple-400 transition duration-300"
+              >
+                <FaTwitter className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-purple-400 transition duration-300"
+              >
+                <FaInstagram className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.tiktok.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-purple-400 transition duration-300"
+              >
+                <FaTiktok className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-purple-400 transition duration-300"
+              >
+                <FaYoutube className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+          <div>
+            <p className="text-sm text-purple-400">
+              &copy; {new Date().getFullYear()} Crisis Connect. All rights
+              reserved.
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );
