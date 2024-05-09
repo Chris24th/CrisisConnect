@@ -123,7 +123,7 @@ const IndexPage: React.FC = () => {
                 >
                   {isMenuOpen ? (
                     <svg
-                      className="w-6 h-6 mt-28 fill-current text-purple-300"
+                      className="w-6 h-6 mt-28 fill-current text-purple-700"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
                     >
