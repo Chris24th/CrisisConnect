@@ -285,17 +285,20 @@ const IndexPage: React.FC = () => {
         <div className="max-w-xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-gray-900">Comments</h2>
           <div className="bg-white rounded-lg shadow-md p-6">
-            <form onSubmit={handleSubmit} className="flex mb-4">
+            <form
+              onSubmit={handleSubmit}
+              className="mb-4 flex flex-col sm:flex-row items-center"
+            >
               <input
                 type="text"
                 value={newComment}
                 onChange={(e) => setNewComment(e.target.value)}
                 placeholder="Add a new comment"
-                className="flex-grow mr-2 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-grow my-2 px-4 py-2 mr-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
               <button
                 type="submit"
-                className="bg-purple-700 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded-lg"
+                className="bg-purple-700 hover:bg-purple-900 text-purple-100 font-bold py-2 px-4 rounded-lg h-10"
               >
                 Submit
               </button>
