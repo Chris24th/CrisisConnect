@@ -82,9 +82,11 @@ const IndexPage: React.FC = () => {
         <div className="flex justify-between items-center px-4 w-full">
           <div className="flex items-center">
             {/* <img src="/logo2.png" alt="Logo" className="h-12" /> */}
-            <h1 className="text-xl font-bold logo-font text-purple-300">
-              Crisis Connect
-            </h1>
+            <button onClick={() => scrollToSection("home")}>
+              <h1 className="text-xl font-bold logo-font text-purple-300">
+                Crisis Connect
+              </h1>
+            </button>
           </div>
           <nav className="hidden md:flex">
             <ul className="flex">
@@ -159,10 +161,7 @@ const IndexPage: React.FC = () => {
         )}
       </header>
       {/* Sections */}
-      <section className="hero">
-        {/* <div className="hero-image">
-          <img src="/hero-bg.png" alt="Hero Image" />
-        </div> */}
+      <section id="home" className="hero">
         <div className="hero-content mt-12 text-purple-200">
           <h1>
             Social Media <br /> and Calamities
@@ -180,13 +179,65 @@ const IndexPage: React.FC = () => {
           </ul>
         </div>
       </section>
-
       {/* <section id="home" className="h-screen bg-gray-100">
         <img src="/hero-bg.png" alt="Logo" className="w-full" />
-      </section> */}
-      <section id="content" className="h-screen bg-gray-200">
-        <h2>Contents here</h2>
+      </section> */}{" "}
+      {/* -----------------------CONTENT SECTION----------------------- */}
+      {/* -----------------------CONTENT SECTION----------------------- */}
+      {/* -----------------------CONTENT SECTION----------------------- */}
+      <section
+        id="content"
+        className="h-auto bg-gray-200 flex flex-col md:flex-row"
+      >
+        <div className="md:w-1/2 p-8">
+          <h2 className="text-2xl font-bold mb-4">
+            How Social Media Has Transformed Disaster Response The Changing
+            Landscape of Information Sharing
+          </h2>
+          <p className="mb-4 text-justify">
+            In the past, when natural disasters or other calamities struck, the
+            public had to rely primarily on traditional media sources like
+            television, radio, and print to stay informed. This meant that the
+            flow of information was largely one-way, with news outlets serving
+            as the gatekeepers and disseminators of critical updates and
+            emergency instructions.
+          </p>
+          <h3 className="text-xl font-bold mb-2">The Rise of Social Media</h3>
+          <p className="mb-4 text-justify">
+            However, the advent of social media has revolutionized the way
+            information is shared and accessed during times of crisis. Platforms
+            like Facebook, Twitter, and Instagram have become powerful tools for
+            individuals, social workers, and government agencies to quickly
+            disseminate and gather information in real-time.
+          </p>
+          {/* ... */}
+        </div>
+        <div className="md:w-1/2 p-8">
+          <h3 className="text-xl font-bold mb-2">Benefits for Families</h3>
+          <p className="mb-4 text-justify">
+            For families affected by a disaster, social media has become a
+            lifeline. They can use these platforms to connect with loved ones,
+            share updates on their safety and well-being, and coordinate relief
+            efforts. Social media also allows families to access critical
+            information, such as evacuation orders, shelter locations, and
+            emergency resources, in a more immediate and accessible way.
+          </p>
+          <h3 className="text-xl font-bold mb-2">Empowering Social Workers</h3>
+          <p className="mb-4 text-justify">
+            Social workers have also leveraged social media to enhance their
+            disaster response efforts. They can use these platforms to identify
+            and reach out to vulnerable individuals and communities, coordinate
+            relief efforts, and share important information about available
+            support services. This has been particularly valuable in situations
+            where traditional communication channels may be disrupted or
+            overwhelmed.
+          </p>
+          {/* ... */}
+        </div>
       </section>
+      {/* -----------------------COMMENT SECTION----------------------- */}
+      {/* -----------------------COMMENT SECTION----------------------- */}
+      {/* -----------------------COMMENT SECTION----------------------- */}
       <section id="comments" className="h-screen bg-gray-400">
         <h2>Comments</h2>
         <form onSubmit={handleSubmit}>
@@ -209,7 +260,9 @@ const IndexPage: React.FC = () => {
           ))}
         </ul>
       </section>
-      {/* Footer */}
+      {/* -----------------------FOOTER SECTION----------------------- */}
+      {/* -----------------------FOOTER SECTION----------------------- */}
+      {/* -----------------------FOOTER SECTION----------------------- */}
       <footer
         id="contact"
         className="h-32 bg-purple-700 flex justify-center items-center"
