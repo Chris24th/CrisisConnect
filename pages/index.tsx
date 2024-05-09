@@ -154,7 +154,7 @@ const IndexPage: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden rounded-md">
             <div
-              className="mt-16 px-6 pt-2 pb-3 space-y-1 sm:px-6 bg-purple-900 bg-opacity-70 backdrop-blur"
+              className="mt-16 px-6 pt-2 pb-3 space-y-1 sm:px-6 bg-purple-900 bg-opacity-90 backdrop-blur"
               onClick={toggleMenu}
             >
               {menuItems.map((item, index) => (
