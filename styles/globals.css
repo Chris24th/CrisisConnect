@@ -84,3 +84,11 @@ body {
   width: 10%;
   height: auto;
 }
+
+
+.h3-style{
+  /* text-xl font-bold mb-2 */
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 4px;
+}

@@ -163,7 +163,7 @@ const IndexPage: React.FC = () => {
       {/* Sections */}
       <section id="home" className="hero">
         <div className="hero-content mt-12 text-purple-200">
-          <h1>
+          <h1 className="font-bold">
             Social Media <br /> and Calamities
           </h1>
           <ul>
@@ -185,16 +185,13 @@ const IndexPage: React.FC = () => {
       {/* -----------------------CONTENT SECTION----------------------- */}
       {/* -----------------------CONTENT SECTION----------------------- */}
       {/* -----------------------CONTENT SECTION----------------------- */}
-      <section
-        id="content"
-        className="h-auto bg-gray-200 flex flex-col md:flex-row"
-      >
-        <div className="md:w-1/2 p-8">
-          <h2 className="text-2xl font-bold mb-4">
+      <section id="content" className="h-auto text-indigo-900 bg-purple-200">
+        <div className="p-8">
+          <h2 className="h3-style mt-10">
             How Social Media Has Transformed Disaster Response The Changing
             Landscape of Information Sharing
           </h2>
-          <p className="mb-4 text-justify">
+          <p className="mt-4 text-justify">
             In the past, when natural disasters or other calamities struck, the
             public had to rely primarily on traditional media sources like
             television, radio, and print to stay informed. This meant that the
@@ -202,38 +199,74 @@ const IndexPage: React.FC = () => {
             as the gatekeepers and disseminators of critical updates and
             emergency instructions.
           </p>
-          <h3 className="text-xl font-bold mb-2">The Rise of Social Media</h3>
-          <p className="mb-4 text-justify">
-            However, the advent of social media has revolutionized the way
-            information is shared and accessed during times of crisis. Platforms
-            like Facebook, Twitter, and Instagram have become powerful tools for
-            individuals, social workers, and government agencies to quickly
-            disseminate and gather information in real-time.
-          </p>
-          {/* ... */}
         </div>
-        <div className="md:w-1/2 p-8">
-          <h3 className="text-xl font-bold mb-2">Benefits for Families</h3>
-          <p className="mb-4 text-justify">
-            For families affected by a disaster, social media has become a
-            lifeline. They can use these platforms to connect with loved ones,
-            share updates on their safety and well-being, and coordinate relief
-            efforts. Social media also allows families to access critical
-            information, such as evacuation orders, shelter locations, and
-            emergency resources, in a more immediate and accessible way.
-          </p>
-          <h3 className="text-xl font-bold mb-2">Empowering Social Workers</h3>
-          <p className="mb-4 text-justify">
-            Social workers have also leveraged social media to enhance their
-            disaster response efforts. They can use these platforms to identify
-            and reach out to vulnerable individuals and communities, coordinate
-            relief efforts, and share important information about available
-            support services. This has been particularly valuable in situations
-            where traditional communication channels may be disrupted or
-            overwhelmed.
-          </p>
-          {/* ... */}
+        <div className=" flex flex-col md:flex-row">
+          <div className="md:w-1/2 p-8">
+            <h3 className="h3-style">The Rise of Social Media</h3>
+            <p className="mb-4 text-justify">
+              However, the advent of social media has revolutionized the way
+              information is shared and accessed during times of crisis.
+              Platforms like Facebook, Twitter, and Instagram have become
+              powerful tools for individuals, social workers, and government
+              agencies to quickly disseminate and gather information in
+              real-time.
+            </p>
+            <h3 className="h3-style">Benefits for Families</h3>
+            <p className="mb-4 text-justify">
+              For families affected by a disaster, social media has become a
+              lifeline. They can use these platforms to connect with loved ones,
+              share updates on their safety and well-being, and coordinate
+              relief efforts. Social media also allows families to access
+              critical information, such as evacuation orders, shelter
+              locations, and emergency resources, in a more immediate and
+              accessible way.
+            </p>
+          </div>
+          <div className="md:w-1/2 p-8">
+            <h3 className="h3-style">Empowering Social Workers</h3>
+            <p className="mb-4 text-justify">
+              Social workers have also leveraged social media to enhance their
+              disaster response efforts. They can use these platforms to
+              identify and reach out to vulnerable individuals and communities,
+              coordinate relief efforts, and share important information about
+              available support services. This has been particularly valuable in
+              situations where traditional communication channels may be
+              disrupted or overwhelmed.
+            </p>
+            <h3 className="h3-style">Improved Coordination for Governments</h3>
+            <p className="mb-4 text-justify">
+              For government agencies, social media has become an invaluable
+              tool for disseminating information, coordinating emergency
+              response, and engaging with the public. By using these platforms,
+              officials can quickly share updates, issue alerts, and respond to
+              inquiries, ensuring that the public has access to the most
+              up-to-date and reliable information during a crisis.
+            </p>
+            {/* ... */}
+          </div>
         </div>
+      </section>
+      <section className="h-auto p-8 bg-indigo-100 text-purple-900">
+        <h1 className="h3-style">
+          Difference from the past where information is only provided by the
+          media (TV, radio and print).
+        </h1>
+        <p className="mt-6 text-justify">
+          The primary difference between the past and the present in terms of
+          information dissemination during calamities is the shift from
+          traditional media sources like television, radio, and print to social
+          media platforms. In the past, the flow of information was largely
+          one-way, with news outlets serving as the primary gatekeepers and
+          disseminators of critical updates and emergency instructions. In
+          contrast, social media has revolutionized the way information is
+          shared and accessed during disasters. It allows for real-time
+          communication, information sharing, and collaboration among
+          stakeholders, including authorities, disaster management
+          professionals, and at-risk communities. This shift has significantly
+          enhanced disaster preparedness, response, and risk reduction efforts
+          by enabling faster and more effective communication of critical
+          information
+        </p>
       </section>
       {/* -----------------------COMMENT SECTION----------------------- */}
       {/* -----------------------COMMENT SECTION----------------------- */}
@@ -267,7 +300,7 @@ const IndexPage: React.FC = () => {
         id="contact"
         className="h-32 bg-purple-900 flex justify-center items-center"
       >
-        <p>Footer content goes here</p>
+        <p>Footer content </p>
       </footer>
     </div>
   );
