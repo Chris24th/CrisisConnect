@@ -281,9 +281,9 @@ const IndexPage: React.FC = () => {
       {/* -----------------------COMMENT SECTION----------------------- */}
       {/* -----------------------COMMENT SECTION----------------------- */}
       {/* -----------------------COMMENT SECTION----------------------- */}
-      <section id="comments" className="bg-gray-100 py-16">
+      <section id="comments" className="bg-indigo-200 py-16">
         <div className="max-w-xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-gray-900">Comments</h2>
+          <h2 className="text-3xl font-bold mb-8 text-indigo-900">Comments</h2>
           <div className="bg-white rounded-lg shadow-md p-6">
             <form
               onSubmit={handleSubmit}
@@ -294,11 +294,11 @@ const IndexPage: React.FC = () => {
                 value={newComment}
                 onChange={(e) => setNewComment(e.target.value)}
                 placeholder="Add a new comment"
-                className="flex-grow my-2 px-4 py-2 mr-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="flex-grow my-2 px-4 py-2 mr-2 text-indigo-900 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
               <button
                 type="submit"
-                className="bg-purple-700 hover:bg-purple-900 text-purple-100 font-bold py-2 px-4 rounded-lg h-10"
+                className="bg-indigo-700 hover:bg-indigo-900 text-indigo-100 font-bold py-2 px-4 rounded-lg h-10"
               >
                 Submit
               </button>
@@ -307,9 +307,9 @@ const IndexPage: React.FC = () => {
               {comments.map((comment) => (
                 <li
                   key={comment.id}
-                  className="bg-gray-100 rounded-lg p-4 mb-4 flex justify-between items-center"
+                  className="bg-indigo-100 rounded-lg p-4 mb-4 flex justify-between items-center"
                 >
-                  <p className="text-gray-800">{comment.text}</p>
+                  <p className="text-indigo-900">{comment.text}</p>
                 </li>
               ))}
             </ul>
