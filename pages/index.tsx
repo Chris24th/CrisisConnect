@@ -75,7 +75,7 @@ const IndexPage: React.FC = () => {
       <header
         className={`fixed w-full h-16 flex z-50 transition-colors duration-300 ${
           isScrolled
-            ? "bg-purple-900 bg-opacity-70 backdrop-blur"
+            ? "bg-purple-900 bg-opacity-90 backdrop-blur"
             : "bg-transparent"
         }`}
       >
@@ -265,7 +265,7 @@ const IndexPage: React.FC = () => {
       {/* -----------------------FOOTER SECTION----------------------- */}
       <footer
         id="contact"
-        className="h-32 bg-purple-700 flex justify-center items-center"
+        className="h-32 bg-purple-900 flex justify-center items-center"
       >
         <p>Footer content goes here</p>
       </footer>
